@@ -64,9 +64,6 @@
 
 
 // 9. Projects Section (At Least 3 Projects): Follow the following 2 points.
-
-
-
 // -Showcase at least three of your best projects in card format.
 
 // -Each project card must contain the following 10 points.

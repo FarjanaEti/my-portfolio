@@ -1,9 +1,14 @@
 import './App.css'
 import { MdOutlineLabelImportant } from "react-icons/md";
 import developerImg from '../src/assets/icons/eti-3.png';
-import { FaFacebook, FaGithub, FaLinkedin, FaSmile } from 'react-icons/fa';
+import { FaCss3Alt, FaDatabase, FaFacebook, FaGithub, FaHtml5, FaJs, FaLinkedin, FaNodeJs, FaReact, FaSmile } from 'react-icons/fa';
 import { FaLaptopCode, FaMusic, FaLightbulb } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { RiTailwindCssLine } from 'react-icons/ri';
+import { IoLogoFirebase } from 'react-icons/io5';
+import Project from './Project';
+
+
 
 function App() {
   return (
@@ -108,12 +113,10 @@ function App() {
     />
   </div>
 </div>
-
-
   {/* Banner ends here */}
 
    {/* About me start here */}
-   <div className="max-w-7xl mx-auto p-10 bg-gradient-to-r from-amber-50 to-yellow-100 shadow-xl rounded-lg">
+   <div className="max-w-7xl mt-20 mx-auto p-10 bg-gradient-to-r from-amber-50 to-yellow-100 shadow-xl rounded-lg">
       <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-6">
         About Me
       </h2>
@@ -201,6 +204,78 @@ function App() {
       </div>
     </div>
    {/* About me start here */}
+  
+
+  {/* Skill section start*/}
+  <div className="w-full mt-20 p-10 bg-gray-100 text-center">
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-4xl font-bold ">Skills I have gained so far...</h2>
+        <p className="text-gray-600 mt-2">I am a passionate and dedicated web developer skilled in modern technologies like <span style={{
+          backgroundImage: "linear-gradient(#F948B2, #8758F1)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          display: "inline-block",
+        }}> HTML, CSS, JavaScript, React, Node.js, MongoDB, Firebase, Tailwind, and DaisyUI </span> With a strong foundation in frontend and backend development, I enjoy building dynamic, user-friendly applications. Always eager to learn and grow, I strive to create seamless digital experiences with efficient and scalable code</p>
+      </div>
+      
+      <h3 className="mt-10 text-xl font-semibold">Skills</h3>
+      <div className="flex justify-center gap-6 mt-4">
+        <div className="w-20 h-20  bg-gray-200 rounded-lg shadow">
+          <h1 className='text-xl mt-1 font-semibold'>Html</h1>
+          <FaHtml5 className="text-orange-500 ml-5 mt-2 text-4xl" />
+        </div>
+        <div className="w-20 h-20  bg-gray-200 rounded-lg shadow">
+        <h1 className='text-xl mt-1 font-semibold'>Css</h1>
+          <FaCss3Alt className="text-blue-500 ml-5 mt-2 text-4xl" />
+        </div>
+        <div className="w-20 h-20 bg-gray-200 rounded-lg shadow">
+        <h1 className='text-xl mt-1 font-semibold'>JS</h1>
+          <FaJs className="text-yellow-500 ml-5 mt-2 text-4xl" />
+        </div>
+        <div className="w-20 h-20  bg-gray-200 rounded-lg shadow">
+        <h1 className='text-xl mt-1 font-semibold'>React</h1>
+          <FaReact className="text-blue-400 ml-5 mt-2  text-4xl" />
+        </div>
+        <div className="w-20 h-20 bg-gray-200 rounded-lg shadow">
+        <h1 className='text-xl mt-1 font-semibold'>Node Js</h1>
+          <FaNodeJs className="text-green-500 ml-5 mt-2 text-4xl" />
+        </div>
+        <div className="w-28 h-20 bg-gray-200 rounded-lg shadow">
+        <h1 className='text-xl mt-1 font-semibold'>MongoDB</h1>
+          <FaDatabase className="text-gray-600 ml-5 mt-2 text-4xl" />
+        </div>
+        <div className="w-28 h-20 bg-gray-200 rounded-lg shadow">
+        <h1 className='text-xl mt-1 font-semibold'>Tailwind</h1>
+        <RiTailwindCssLine className="text-blue-500 ml-6 mt-2 text-4xl" />  
+        </div>
+        <div className="w-28 h-20 bg-gray-200 rounded-lg shadow">
+        <h1 className='text-xl mt-1 font-semibold'>Firebase</h1>
+        <IoLogoFirebase className="text-orange-400 ml-7 mt-2 text-4xl" />
+        </div>
+      </div>
+    </div>
+  {/* Skill section ends */}
+
+  {/* education section start */}
+  <section className="p-8 bg-gray-100 rounded-xl shadow-lg">
+      <h2 className="text-3xl font-bold text-center  mb-6">Education</h2>
+      <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-semibold">🎓 Bachelors in Computer Science & Engineering</h3>
+        <p className="text-gray-700"> Institute of science and technology</p>
+        <p className="text-gray-600"> 3rd Year, 6th Semester (Expected Graduation: 2026)</p>
+        <p className="text-gray-800 font-medium"> Last Semester CGPA: <span className="text-green-600 font-bold">4.00</span></p>
+        <p className="text-gray-800 font-medium"> Average CGPA: <span className="text-blue-600 font-bold">3.76</span></p>
+      </div>
+    </section>
+  {/* education section ends */}
+
+  {/* project section start */}
+  
+  <div>
+      <Project /> 
+    </div>
+  {/* project section ends */}
+
   
     </div>
   )
