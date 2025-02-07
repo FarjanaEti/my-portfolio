@@ -64,7 +64,7 @@ const Project = () => {
       ]
     },
     {
-      name: "Food Delivery App",
+      name: "Food Shearing App",
       image: "https://linktoimage.com/fooddeliveryapp.jpg",
       images: [img, img2, img3, img4, img5, img1],
       description: "Purpose of our page is to connect the people who want to share surplus food with those in need.",
@@ -86,50 +86,53 @@ const Project = () => {
   ];
 
   return (
-    <div className="container bg-[#FCE7C8] mt-20 mx-auto py-5 px-5">
-      <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
-      <div className="grid gap-6">
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            initial={{ x: index % 2 === 0 ? -150 : 150, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 1.8, ease: "easeOut", delay: index * 0.3 }}
-            className="card  mx-auto w-[900px] lg:card-side bg-base-100 shadow-xl p-5"
-          >
-            {/* Image Container */}
-            <div className="card bg-base-100 h-96 w-72 shadow-xl overflow-hidden group">
-              <figure className="relative w-full h-72 overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-[500px] transition-transform duration-[4000ms] group-hover:translate-y-[-1550px]">
-                  {project.images.map((image, imgIndex) => (
-                    <img
-                      key={imgIndex}
-                      className="w-full h-64 object-cover"
-                      src={image}
-                      alt={`Image ${imgIndex + 1}`}
-                    />
-                  ))}
-                </div>
-              </figure>
-              {/* Card Body */}
-              <div className="my-3 items-center text-center">
-                <h2 className="text-2xl font-bold">Project Demo</h2>
-              </div>
+   <div className="container bg-[#FCE7C8] mt-20 mx-auto py-5 px-5 sm:py-10 lg:py-20">
+  <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+  <div className="grid gap-6 md:gap-10">
+    {projects.map((project, index) => (
+      <motion.div
+        key={index}
+        initial={{ x: index % 2 === 0 ? -150 : 150, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 1.8, ease: "easeOut", delay: index * 0.3 }}
+        className="card mx-auto w-full max-w-4xl lg:card-side bg-base-100 shadow-xl p-5"
+      >
+        {/* Image Container */}
+        <div className="card bg-base-100 h-auto w-full sm:w-72 shadow-xl overflow-hidden group">
+          <figure className="relative w-full h-72 overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-[500px] transition-transform duration-[4000ms] group-hover:translate-y-[-1550px]">
+              {project.images.map((image, imgIndex) => (
+                <img
+                  key={imgIndex}
+                  className="w-full h-64 object-cover"
+                  src={image}
+                  alt={`Image ${imgIndex + 1}`}
+                />
+              ))}
             </div>
-            <div className="card-body -mt-3 lg:w-2/3">
-              <h2 className="card-title text-2xl font-bold">{project.name}</h2>
-              <p className="text-gray-600  border-t border-b p-2">{project.description}</p>
+          </figure>
+          {/* Card Body */}
+          <div className="my-3 items-center text-center">
+            <h2 className="text-2xl font-bold">Project Demo</h2>
+          </div>
+        </div>
 
-              <div className="">
-                <h4 className="font-bold my-2 text-start text-gray-700">Technology stack:</h4>
-                <div className="flex gap-2 flex-wrap">
-                  {project.techStack.map((tech, i) => (
-                    <span key={i} className="badge badge-neutral">{tech}</span>
-                  ))}
-                </div>
-              </div>
-              <div className="">
+        {/* Project Details */}
+        <div className="card-body -mt-3 lg:w-2/3">
+          <h2 className="card-title text-2xl font-bold">{project.name}</h2>
+          <p className="text-gray-600 border-t border-b p-2">{project.description}</p>
+
+          <div>
+            <h4 className="font-bold my-2 text-start text-gray-700">Technology stack:</h4>
+            <div className="flex gap-2 flex-wrap">
+              {project.techStack.map((tech, i) => (
+                <span key={i} className="badge badge-neutral">{tech}</span>
+              ))}
+            </div>
+          </div>
+
+          <div>
             <h4 className="font-bold text-start text-gray-700">Challenge:</h4>
             <ul className="text-gray-600">
               {project.challenges.map((challenge, index) => (
@@ -138,7 +141,7 @@ const Project = () => {
             </ul>
           </div>
 
-          <div className="">
+          <div>
             <h4 className="font-bold text-start text-gray-700">Improvement:</h4>
             <ul className="text-gray-600">
               {project.potentialImprovements.map((improvement, index) => (
@@ -146,16 +149,18 @@ const Project = () => {
               ))}
             </ul>
           </div>
-              <div className="card-actions">
-                <a href={project.liveLink} className="btn btn-primary">Live Project</a>
-                <a href={project.githubLink} className="btn btn-secondary">GitHub Repo</a>
-                <a href={project.githubLink} className="btn btn-accent">View More</a>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </div>
+
+          <div className="card-actions flex flex-wrap gap-2">
+            <a href={project.liveLink} className="btn btn-primary">Live Project</a>
+            <a href={project.githubLink} className="btn btn-secondary">GitHub Repo</a>
+            <a href={project.githubLink} className="btn btn-accent">View More</a>
+          </div>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
   );
 };
 

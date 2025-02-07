@@ -34,10 +34,10 @@ function App() {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li> 
-      <li><a>About Me</a></li>
-      <li><a>Project</a></li>
-      <li><a>Contact Me</a></li>
+        <li><a href="#home">Home</a></li>
+  <li><a href="#about">About Me</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#contact">Contact Me</a></li>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">
@@ -46,10 +46,10 @@ function App() {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li> 
-      <li><a>About Me</a></li>
-      <li><a>Project</a></li>
-      <li><a>Contact Me</a></li>
+    <li><a href="#home">Home</a></li>
+  <li><a href="#about">About Me</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#contact">Contact Me</a></li>
     </ul>
   </div>
   <div className="navbar-end">
@@ -61,11 +61,11 @@ function App() {
   {/* Banner start here */}
   <div
   className="head bg-no-repeat bg-left-top 
-  md:bg-[url('../src/assets/icons/header_bg.png')] md:bg-right-bottom"
+  md:bg-[url('../src/assets/icons/header_bg.png')] md:bg-right-bottom" id='home'
 >
   <div className="banner flex flex-col md:flex-row justify-between items-center">
     {/* Left Content */}
-    <div className="banner-content ml-32  max-w-[580px] text-center md:text-left">
+    <div className="banner-content md:ml-32  max-w-[580px] text-center md:text-left">
       <h4 className="bnr-style text-[30px] font-bold text-gray-800">Hi, I am</h4>
       <h2
         className="bnr-t-style text-[60px] font-extrabold text-transparent"
@@ -98,7 +98,7 @@ function App() {
         <button className=" btn bg-[#FCE7C8]  px-6 py-2 rounded-lg mr-4">
           Resume
         </button>
-        <button className="btn bg-gray-700 text-white px-6 py-2 rounded-lg">
+        <button className="btn-all bg-gray-700 text-white px-6 py-2 rounded-lg">
           Contact
         </button>
       </div>
@@ -115,7 +115,7 @@ function App() {
   {/* Banner ends here */}
 
    {/* About me start here */}
-   <div className="max-w-7xl mt-20 mx-auto p-10 bg-gradient-to-r from-[#FFCDB2] to-[#FCE7C8] shadow-xl rounded-lg">
+   <div id='about' className="max-w-7xl mt-20 mx-auto p-10 bg-gradient-to-r from-[#FFCDB2] to-[#FCE7C8] shadow-xl rounded-lg">
       <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-6">
         About Me
       </h2>
@@ -127,7 +127,7 @@ function App() {
         transition={{ duration: 0.5 }}
         className="text-gray-700 text-lg text-center mb-6"
       >
-        Hello! 👋 I’m a passionate <span className="font-semibold">CSE student</span> currently exploring the 
+        Hello!  I’m a passionate <span className="font-semibold">CSE student</span> currently exploring the 
         world of <span className="text-blue-600 font-semibold">web development</span>. 
         I have worked with <span className="font-semibold">C</span> and <span className="font-semibold">C++</span>, 
         but when I discovered <span className="font-semibold text-yellow-600">JavaScript</span> and 
@@ -141,7 +141,7 @@ function App() {
           initial={{ x: -100 }}
           animate={{ x: 100 }}
           transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
-          className="bg-white p-6 rounded-lg shadow-lg w-[500px] flex-shrink-0 hover:scale-105 transition-transform duration-300"
+          className="bg-white p-6 rounded-lg shadow-lg w-[500px] md:w-[500px] flex-shrink-0 hover:scale-105 transition-transform duration-300"
         >
           <h3 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
             <FaLaptopCode className="text-blue-600" /> My Programming Journey
@@ -158,7 +158,7 @@ function App() {
           initial={{ x: 100 }}
           animate={{ x: -50 }}
           transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
-          className="bg-white p-6 rounded-lg shadow-lg w-[500px] flex-shrink-0 hover:scale-105 transition-transform duration-300"
+          className="bg-white p-6 rounded-lg shadow-lg w-[300px] md:w-[500px] flex-shrink-0 hover:scale-105 transition-transform duration-300"
         >
           <h3 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
             <FaLightbulb className="text-yellow-500" /> What I Enjoy Working On
@@ -174,7 +174,7 @@ function App() {
           initial={{ x: -100 }}
           animate={{ x: 100 }}
           transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
-          className="bg-white p-6 rounded-lg shadow-lg w-[500px] flex-shrink-0 hover:scale-105 transition-transform duration-300"
+          className="bg-white p-6 rounded-lg shadow-lg w-[300px] md:w-[500px] flex-shrink-0 hover:scale-105 transition-transform duration-300"
         >
           <h3 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
             <FaMusic className="text-pink-500" /> Beyond Programming
@@ -190,23 +190,22 @@ function App() {
           initial={{ x: 100 }}
           animate={{ x: -50 }}
           transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
-          className="bg-white p-6 rounded-lg shadow-lg w-[500px] flex-shrink-0 hover:scale-105 transition-transform duration-300"
+          className="bg-white p-6 rounded-lg shadow-lg w-[300px] md:w-[500px] flex-shrink-0 hover:scale-105 transition-transform duration-300"
         >
           <h3 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
             <FaSmile className="text-green-500" /> My Personality
           </h3>
           <p className="text-gray-700 mt-2">
             I am <span className="font-semibold">curious, detail-oriented</span>, and enjoy **continuous learning**.  
-            I take my work seriously, but I also **value creativity & fun** along the way! 🎨🚀
+            I take my work seriously, but I also **value creativity & fun** along the way! 
           </p>
         </motion.div>
       </div>
     </div>
    {/* About me start here */}
   
-
   {/* Skill section start*/}
-  <div className="w-full mt-20 p-10 bg-[#FCE7C8] text-center">
+  <div  className="w-full mt-20 p-10 bg-[#FCE7C8] text-center">
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-4xl font-bold ">Skills I have gained so far...</h2>
         <p className="text-gray-600 mt-2">I am a passionate and dedicated web developer skilled in modern technologies like <span style={{
@@ -218,36 +217,36 @@ function App() {
       </div>
       
       <h3 className="mt-10 text-xl font-semibold">Skills</h3>
-      <div className="flex justify-center gap-6 mt-4">
-        <div className="w-20 h-20  bg-gray-200 rounded-lg shadow">
+      <div className="md:flex justify-center gap-6 mt-4">
+        <div className="md:w-20 h-20  bg-gray-200 rounded-lg shadow">
           <h1 className='text-xl mt-1 font-semibold'>Html</h1>
           <FaHtml5 className="text-orange-500 ml-5 mt-2 text-4xl" />
         </div>
-        <div className="w-20 h-20  bg-gray-200 rounded-lg shadow">
+        <div className="md:w-20 h-20  bg-gray-200 rounded-lg shadow">
         <h1 className='text-xl mt-1 font-semibold'>Css</h1>
           <FaCss3Alt className="text-blue-500 ml-5 mt-2 text-4xl" />
         </div>
-        <div className="w-20 h-20 bg-gray-200 rounded-lg shadow">
+        <div className="md:w-20 h-20 bg-gray-200 rounded-lg shadow">
         <h1 className='text-xl mt-1 font-semibold'>JS</h1>
           <FaJs className="text-yellow-500 ml-5 mt-2 text-4xl" />
         </div>
-        <div className="w-20 h-20  bg-gray-200 rounded-lg shadow">
+        <div className="md:w-20 h-20  bg-gray-200 rounded-lg shadow">
         <h1 className='text-xl mt-1 font-semibold'>React</h1>
           <FaReact className="text-blue-400 ml-5 mt-2  text-4xl" />
         </div>
-        <div className="w-20 h-20 bg-gray-200 rounded-lg shadow">
+        <div className="md:w-20 h-20 bg-gray-200 rounded-lg shadow">
         <h1 className='text-xl mt-1 font-semibold'>Node Js</h1>
           <FaNodeJs className="text-green-500 ml-5 mt-2 text-4xl" />
         </div>
-        <div className="w-28 h-20 bg-gray-200 rounded-lg shadow">
+        <div className="md:w-28 h-20 bg-gray-200 rounded-lg shadow">
         <h1 className='text-xl mt-1 font-semibold'>MongoDB</h1>
           <FaDatabase className="text-gray-600 ml-5 mt-2 text-4xl" />
         </div>
-        <div className="w-28 h-20 bg-gray-200 rounded-lg shadow">
+        <div className="md:w-28 h-20 bg-gray-200 rounded-lg shadow">
         <h1 className='text-xl mt-1 font-semibold'>Tailwind</h1>
         <RiTailwindCssLine className="text-blue-500 ml-6 mt-2 text-4xl" />  
         </div>
-        <div className="w-28 h-20 bg-gray-200 rounded-lg shadow">
+        <div className="md:w-28 h-20 bg-gray-200 rounded-lg shadow">
         <h1 className='text-xl mt-1 font-semibold'>Firebase</h1>
         <IoLogoFirebase className="text-orange-400 ml-7 mt-2 text-4xl" />
         </div>
@@ -270,13 +269,13 @@ function App() {
 
   {/* project section start */}
   
-  <div>
+  <div id='projects'>
       <Project /> 
     </div>
   {/* project section ends */}
  
  {/* Contact  */}
- <section className="bg-[#FFB4A2] mt-20 p-8 rounded-lg shadow-md  mx-auto text-center">
+ <section id='contact' className="bg-[#FFB4A2] mt-20 p-8 rounded-lg shadow-md  mx-auto text-center">
       <h2 className="text-2xl font-semibold mb-4">Get in touch or shoot me an email directly on etimourakkhieti@gmail.com</h2>
       <p className="text-gray-700 mb-6">Feel free to reach out to me through any of the methods below.</p>
 
