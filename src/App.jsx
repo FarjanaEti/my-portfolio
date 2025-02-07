@@ -1,7 +1,7 @@
 import './App.css'
 import { MdOutlineLabelImportant } from "react-icons/md";
 import developerImg from '../src/assets/icons/eti-3.png';
-import { FaCss3Alt, FaDatabase, FaFacebook, FaGithub, FaHtml5, FaJs, FaLinkedin, FaNodeJs, FaReact, FaSmile } from 'react-icons/fa';
+import { FaCss3Alt, FaDatabase, FaEnvelope, FaFacebook, FaGithub, FaHtml5, FaJs, FaLinkedin, FaNodeJs, FaPhone, FaReact, FaSmile, FaWhatsapp } from 'react-icons/fa';
 import { FaLaptopCode, FaMusic, FaLightbulb } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { RiTailwindCssLine } from 'react-icons/ri';
@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
      {/* navbar start */}
-     <div className="navbar bg-base-100">
+     <div className="navbar sticky top-0 z-50 bg-transparent shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,7 +60,7 @@ function App() {
 
   {/* Banner start here */}
   <div
-  className="head bg-no-repeat bg-left-top border
+  className="head bg-no-repeat bg-left-top 
   md:bg-[url('../src/assets/icons/header_bg.png')] md:bg-right-bottom"
 >
   <div className="banner flex flex-col md:flex-row justify-between items-center">
@@ -79,9 +79,8 @@ function App() {
         Farjana Eti
       </h2>
 
-      <p className="banner-p text-gray-600 mt-4">
-        I am a frontend Developer
-      </p>
+      <motion.h1 className='text-2xl font-bold' animate={{ color: ['#FFB4A2', '#FFEFC8', '#B5828C'] }}
+                transition={{ duration: 1.5, repeat: Infinity }}>Your friendly neighborhood frontend developer, UX architect, and a CSE Student </motion.h1>
 
       <div className="flex items-center justify-center md:justify-start text-4xl my-4 gap-4">
         <a href="https://www.facebook.com/">
@@ -96,10 +95,10 @@ function App() {
       </div>
 
       <div className="mt-6 flex justify-center md:justify-start">
-        <button className="btn-all bg-blue-500 text-white px-6 py-2 rounded-lg mr-4">
+        <button className=" btn bg-[#FCE7C8]  px-6 py-2 rounded-lg mr-4">
           Resume
         </button>
-        <button className="btn-all bg-gray-700 text-white px-6 py-2 rounded-lg">
+        <button className="btn bg-gray-700 text-white px-6 py-2 rounded-lg">
           Contact
         </button>
       </div>
@@ -116,7 +115,7 @@ function App() {
   {/* Banner ends here */}
 
    {/* About me start here */}
-   <div className="max-w-7xl mt-20 mx-auto p-10 bg-gradient-to-r from-amber-50 to-yellow-100 shadow-xl rounded-lg">
+   <div className="max-w-7xl mt-20 mx-auto p-10 bg-gradient-to-r from-[#FFCDB2] to-[#FCE7C8] shadow-xl rounded-lg">
       <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-6">
         About Me
       </h2>
@@ -207,7 +206,7 @@ function App() {
   
 
   {/* Skill section start*/}
-  <div className="w-full mt-20 p-10 bg-gray-100 text-center">
+  <div className="w-full mt-20 p-10 bg-[#FCE7C8] text-center">
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-4xl font-bold ">Skills I have gained so far...</h2>
         <p className="text-gray-600 mt-2">I am a passionate and dedicated web developer skilled in modern technologies like <span style={{
@@ -257,7 +256,7 @@ function App() {
   {/* Skill section ends */}
 
   {/* education section start */}
-  <section className="p-8 bg-gray-100 rounded-xl shadow-lg">
+  <section className="p-8 bg-[#FFCDB2] rounded-xl shadow-lg">
       <h2 className="text-3xl font-bold text-center  mb-6">Education</h2>
       <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-xl font-semibold">🎓 Bachelors in Computer Science & Engineering</h3>
@@ -275,7 +274,26 @@ function App() {
       <Project /> 
     </div>
   {/* project section ends */}
+ 
+ {/* Contact  */}
+ <section className="bg-[#FFB4A2] mt-20 p-8 rounded-lg shadow-md  mx-auto text-center">
+      <h2 className="text-2xl font-semibold mb-4">Get in touch or shoot me an email directly on etimourakkhieti@gmail.com</h2>
+      <p className="text-gray-700 mb-6">Feel free to reach out to me through any of the methods below.</p>
 
+      <div className="flex flex-col gap-4 items-center">
+        <a href="mailto:your.email@example.com" className="flex items-center gap-2 text-blue-600 hover:underline">
+          <FaEnvelope />etimourakkhieti@gmail .com
+        </a>
+
+        <a href="tel:+1234567890" className="flex items-center gap-2 text-blue-600 hover:underline">
+          <FaPhone /> 01707505945
+        </a>
+
+        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline">
+          <FaWhatsapp /> 01707505945
+        </a>
+      </div>
+    </section>
   
     </div>
   )

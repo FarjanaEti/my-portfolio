@@ -19,6 +19,7 @@ import img10 from '../src/assets/demo-3/Screenshot 2025-02-07 135114.png';
 import img11 from '../src/assets/demo-3/Screenshot 2025-02-07 135131.png';
 import img12 from '../src/assets/demo-3/Screenshot 2025-02-07 135145.png';
 import img13 from '../src/assets/demo-3/Screenshot 2025-02-07 134848.png';
+import { motion } from "framer-motion";
 
 const Project = () => {
   const projects = [
@@ -34,32 +35,32 @@ const Project = () => {
       challenges: [
         "Designing a dynamic UI for movie categories",
         "Implementing authentication and user sessions",
-        "Handling movie data synchronization with the database"
+        
       ],
       potentialImprovements: [
         "Adding movie recommendation engine",
         "Implementing a rating system for users",
-        "Integrating social sharing features"
+        
       ]
     },
     {
       name: "MIcro-Job & Earn",
       image: "https://linktoimage.com/gadgetheaven.jpg",
       images: [img6, img7, img8, img9, img10, img11,img12,img13], 
-      description: "A responsive e-commerce platform for gadget shopping with cart and wishlist functionalities.",
+      description: "Earnify is an earning platform that is designed to connect workers and buyers.",
       techStack: ["React", "Tailwind CSS", "Context API", "Node.js"],
       liveLink: "https://assignment-12-6a1a7.web.app/",
       viewLink: "https://food-shearing.web.app/",
-      githubLink: "https://github.com/username/gadgetheaven-client",
+      githubLink: "https://github.com/Programming-Hero-Web-Course4/b10a12-client-side-FarjanaEti",
       challenges: [
         "Handling large product data efficiently",
         "Managing user sessions with authentication",
-        "Ensuring mobile responsiveness"
+        
       ],
       potentialImprovements: [
         "Adding product recommendation system",
         "Implementing better performance optimization",
-        "Integrating advanced filtering and sorting options"
+        
       ]
     },
     {
@@ -70,29 +71,36 @@ const Project = () => {
       techStack: ["React", "Redux", "Firebase", "Tailwind CSS"],
       liveLink: "https://fooddeliveryapp.com",
       viewLink: "https://food-shearing.web.app/allFood",
-      githubLink: "https://github.com/username/fooddeliveryapp-client",
+      githubLink: "https://github.com/programming-hero-web-course2/b10a11-client-side-FarjanaEti",
       challenges: [
-        "Managing state with Redux for complex data flow",
+        
         "Handling real-time order updates",
         "Integrating secure payment processing"
       ],
       potentialImprovements: [
         "Adding user reviews and ratings for food items",
         "Improving search functionality with better filters",
-        "Implementing a delivery tracking feature"
+        
       ]
     }
   ];
 
   return (
-    <div className="container border mx-auto py-10 px-5">
+    <div className="container bg-[#FCE7C8] mt-20 mx-auto py-5 px-5">
       <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
       <div className="grid gap-6">
         {projects.map((project, index) => (
-          <div key={index} className="card border mx-auto w-[900px] lg:card-side bg-base-100 shadow-xl p-5">
+          <motion.div
+            key={index}
+            initial={{ x: index % 2 === 0 ? -150 : 150, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1.8, ease: "easeOut", delay: index * 0.3 }}
+            className="card  mx-auto w-[900px] lg:card-side bg-base-100 shadow-xl p-5"
+          >
             {/* Image Container */}
-            <div className="card bg-base-100 h-80 w-72 shadow-xl overflow-hidden group">
-              <figure className="relative w-full h-64 overflow-hidden">
+            <div className="card bg-base-100 h-96 w-72 shadow-xl overflow-hidden group">
+              <figure className="relative w-full h-72 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-[500px] transition-transform duration-[4000ms] group-hover:translate-y-[-1550px]">
                   {project.images.map((image, imgIndex) => (
                     <img
@@ -109,9 +117,9 @@ const Project = () => {
                 <h2 className="text-2xl font-bold">Project Demo</h2>
               </div>
             </div>
-            <div className="card-body lg:w-2/3">
+            <div className="card-body -mt-3 lg:w-2/3">
               <h2 className="card-title text-2xl font-bold">{project.name}</h2>
-              <p className="text-gray-600 mt-4 border-t border-b p-2">{project.description}</p>
+              <p className="text-gray-600  border-t border-b p-2">{project.description}</p>
 
               <div className="">
                 <h4 className="font-bold my-2 text-start text-gray-700">Technology stack:</h4>
@@ -121,14 +129,30 @@ const Project = () => {
                   ))}
                 </div>
               </div>
+              <div className="">
+            <h4 className="font-bold text-start text-gray-700">Challenge:</h4>
+            <ul className="text-gray-600">
+              {project.challenges.map((challenge, index) => (
+                <li key={index}>- {challenge}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="">
+            <h4 className="font-bold text-start text-gray-700">Improvement:</h4>
+            <ul className="text-gray-600">
+              {project.potentialImprovements.map((improvement, index) => (
+                <li key={index}>- {improvement}</li>
+              ))}
+            </ul>
+          </div>
               <div className="card-actions">
                 <a href={project.liveLink} className="btn btn-primary">Live Project</a>
                 <a href={project.githubLink} className="btn btn-secondary">GitHub Repo</a>
                 <a href={project.githubLink} className="btn btn-accent">View More</a>
-               
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
