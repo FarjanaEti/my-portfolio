@@ -69,8 +69,8 @@ const Project = () => {
       images: [img, img2, img3, img4, img5, img1],
       description: "Purpose of our page is to connect the people who want to share surplus food with those in need.",
       techStack: ["React", "Redux", "Firebase", "Tailwind CSS"],
-      liveLink: "https://fooddeliveryapp.com",
-      viewLink: "https://food-shearing.web.app/allFood",
+      liveLink: "https://food-shearing.web.app/",
+      viewLink: "https://food-shearing.web.app/git",
       githubLink: "https://github.com/programming-hero-web-course2/b10a11-client-side-FarjanaEti",
       challenges: [
         
@@ -153,7 +153,7 @@ const Project = () => {
           <div className="card-actions flex flex-wrap gap-2">
             <a href={project.liveLink} className="btn btn-primary">Live Project</a>
             <a href={project.githubLink} className="btn btn-secondary">GitHub Repo</a>
-            <a href={project.githubLink} className="btn btn-accent">View More</a>
+            <a href={project.liveLink} className="btn btn-accent">View More</a>
           </div>
         </div>
       </motion.div>

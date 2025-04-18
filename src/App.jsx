@@ -141,7 +141,7 @@ function App() {
           initial={{ x: -100 }}
           animate={{ x: 100 }}
           transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
-          className="bg-white p-6 rounded-lg shadow-lg w-[500px] md:w-[500px] flex-shrink-0 hover:scale-105 transition-transform duration-300"
+          className="bg-white p-6 rounded-lg shadow-lg w-[300px] md:w-[500px] flex-shrink-0 hover:scale-105 transition-transform duration-300"
         >
           <h3 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
             <FaLaptopCode className="text-blue-600" /> My Programming Journey
