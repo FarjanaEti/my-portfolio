@@ -31,7 +31,7 @@ const Project = () => {
       techStack: ["React", "Node.js", "MongoDB", "Express"],
       liveLink: "https://movie-buzz-e0a92.web.app/",
       githubLink: "https://github.com/username/movieportal-client",
-      viewLink: "https://movie-buzz-e0a92.web.app/allmovie",
+      viewLink: "https://movie-buzz-e0a92.web.app/",
       challenges: [
         "Designing a dynamic UI for movie categories",
         "Implementing authentication and user sessions",
@@ -50,8 +50,8 @@ const Project = () => {
       description: "Earnify is an earning platform that is designed to connect workers and buyers.",
       techStack: ["React", "Tailwind CSS", "Context API", "Node.js"],
       liveLink: "https://assignment-12-6a1a7.web.app/",
-      viewLink: "https://food-shearing.web.app/",
       githubLink: "https://github.com/Programming-Hero-Web-Course4/b10a12-client-side-FarjanaEti",
+      viewLink: "https://assignment-12-6a1a7.web.app/",
       challenges: [
         "Handling large product data efficiently",
         "Managing user sessions with authentication",
@@ -70,8 +70,8 @@ const Project = () => {
       description: "Purpose of our page is to connect the people who want to share surplus food with those in need.",
       techStack: ["React", "Redux", "Firebase", "Tailwind CSS"],
       liveLink: "https://food-shearing.web.app/",
-      viewLink: "https://food-shearing.web.app/git",
       githubLink: "https://github.com/programming-hero-web-course2/b10a11-client-side-FarjanaEti",
+      viewLink: "https://food-shearing.web.app/",
       challenges: [
         
         "Handling real-time order updates",
